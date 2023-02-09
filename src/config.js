@@ -25,14 +25,14 @@ module.exports = {
     // this function's return object will determine how the client url rewriting will work.
     // set them differently from bindingAddress and port if rammerhead is being served
     // from a reverse proxy.
-    getServerInfo: (req) => ({ hostname: new URL('https://' + req.headers.host).hostname, port: 443, crossDomainPort: 8443, protocol: 'https:' }),
+    getServerInfo: () => ({ hostname: 'catsarecool.tk', port: 443, crossDomainPort: 8443, protocol: 'https:' }),
     // example of non-hard-coding the hostname header
     // getServerInfo: (req) => {
     //     return { hostname: new URL('http://' + req.headers.host).hostname, port: 443, crossDomainPort: 8443, protocol: 'https: };
     // },
 
     // enforce a password for creating new sessions. set to null to disable
-    password: 'diglet',
+    password: null,
 
     // disable or enable localStorage sync (turn off if clients send over huge localStorage data, resulting in huge memory usages)
     disableLocalStorageSync: false,
