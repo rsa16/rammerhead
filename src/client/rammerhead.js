@@ -50,6 +50,8 @@
         var origin = window.__get$(window, 'location').origin;
         var keyChanges = [];
 
+        parent.postMessage(window.location.href, "*");
+
         try {
             syncLocalStorage();
         } catch (e) {
